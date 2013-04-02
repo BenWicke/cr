@@ -1,0 +1,40 @@
+
+<div id="submitit">
+<%= button_to 'Submit A New Incident', new_incident_path, :method => 'get' %>
+</div>
+
+<% if Incident.count != 0 %>
+
+<div style="margin-top:20px;" id="incidentlist">
+<table>
+  <tr style="background:#e7e7e7">
+    <th>Incident Date</th>
+	<th>Incident Report Number</th>
+    <th>Location</th>
+	<th>Status</th>
+	<% if current_user.admin == "yes" %>
+	<th>Submitted By</th>
+	<% end %>
+	
+   
+  </tr>
+
+<% @incidents.each do |incident| %>
+  <tr>
+    <td><%= incident.truncated_time %></td>
+	<td><%= link_to incident.report_nr, incident %></td>
+	<td><%= incident.location %></td>
+	<td><b><%= incident.status %></b> <% if current_user.admin == "yes" %><%= link_to "change", changestatus_incident_path(incident) %><% end %></td>
+	<% if current_user.admin == "yes" %>
+	<td><%= User.find(incident.user_id).profile.name %> (<%= User.find(incident.user_id).profile.department %>)</td>
+	<% end %>
+    <td><%= link_to 'View Time Sheet', incident_timesheet_path(incident) %></td>
+	<td><%= link_to 'Delete Incident', incident, :confirm => 'Are you sure?', :method => :delete %></td>
+	 </tr>
+<% end %>
+</table>
+</div>
+
+<% else %>
+<p>(Your incidents will be listed here after you add the first one)</p>
+<% end %>
