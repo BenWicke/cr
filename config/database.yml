@@ -4,10 +4,7 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  pool: 5
-  timeout: 5000
+postgres://hclilisdiswvmi:xcodKkUHpkbFwx4A5NFOxD2OaV@ec2-54-243-224-187.compute-1.amazonaws.com:5432/d3g5d6g5mb3bmh
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,7 +16,4 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+postgres://hclilisdiswvmi:xcodKkUHpkbFwx4A5NFOxD2OaV@ec2-54-243-224-187.compute-1.amazonaws.com:5432/d3g5d6g5mb3bmh
