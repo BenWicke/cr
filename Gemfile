@@ -10,12 +10,14 @@ gem 'rails', '3.2.13'
 
 #gem 'thin'
 
-group :production do
-  gem 'sqlite3'
-end
-group :development, :test do
-  gem 'sqlite3'
-end
+#group :production do
+#  gem 'pg'
+#end
+#group :development, :test do
+#  gem 'sqlite3'
+#end
+
+gem 'sqlite3-ruby', '1.3.2', :group => :development
 
 
 # Gems used only for assets and not required
