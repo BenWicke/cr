@@ -18,5 +18,4 @@
 .bundle
 db/*.sqlite3
 log/*.log
-config/database.yml
 tmp/**/*
