@@ -7,10 +7,10 @@ development:
 adapter: postgresql
 encoding: unicode
 pool: 5
-database: d41ou1u385uk6v
-username: bnbfhgxnxvhxyr
-password: uQWEEQGFs4SesZ6Nezq0l6tYiF
-host: ec2-23-21-209-165.compute-1.amazonaws.com
+database: d3g5d6g5mb3bmh
+username: hclilisdiswvmi
+password: xcodKkUHpkbFwx4A5NFOxD2OaV
+host: ec2-54-243-224-187.compute-1.amazonaws.com
 port: 5432
 
 # Warning: The database defined as "test" will be erased and
