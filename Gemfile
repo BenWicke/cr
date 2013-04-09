@@ -12,6 +12,7 @@ gem 'rails', '3.2.13'
 
 gem 'thin'
 gem 'activerecord-postgresql-adapter'
+gem 'sequel'
 
 group :production do
   gem 'pg'
