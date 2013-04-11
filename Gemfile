@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 #ruby '1.9.3'
 gem 'rails', '3.2.13'
+gem 'taps', '0.3.24'
 
 
 # Bundle edge Rails instead:
