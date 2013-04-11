@@ -20,7 +20,7 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
-  gem 'taps', => false
+  gem 'taps', :require => false
 end
 
 
