@@ -131,6 +131,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sequel
   sqlite3
-  taps (= 0.3.24)
+  taps
   thin
   uglifier (>= 1.0.3)
