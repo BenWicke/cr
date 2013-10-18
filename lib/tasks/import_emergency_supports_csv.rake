@@ -5,7 +5,7 @@ namespace :import_emergency_supports_csv do
 	task :create_emergency_supports => :environment do
 		puts "Import Emergency Supports"
 	
-		csv_text = File.read('c:/rails/thumb/costrecovery/lib/csv_import/emergency_supports.csv')
+		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/emergency_supports.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access

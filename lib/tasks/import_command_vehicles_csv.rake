@@ -5,7 +5,7 @@ namespace :import_command_vehicles_csv do
 	task :create_command_vehicles => :environment do
 		puts "Import Command Vehicles"
 	
-		csv_text = File.read('c:/rails/thumb/costrecovery/lib/csv_import/command_vehicles.csv')
+		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/command_vehicles.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access

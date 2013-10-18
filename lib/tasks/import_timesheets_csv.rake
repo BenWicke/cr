@@ -5,7 +5,7 @@ namespace :import_timesheets_csv do
 	task :create_timesheets => :environment do
 		puts "Import Timesheets"
 	
-		csv_text = File.read('c:/rails/thumb/costrecovery/lib/csv_import/timesheets.csv')
+		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/timesheets.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		@timesheet_id_array = []
 		csv.each_with_index do |row,index|

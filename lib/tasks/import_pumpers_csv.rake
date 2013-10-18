@@ -5,7 +5,7 @@ namespace :import_pumpers_csv do
 	task :create_pumpers => :environment do
 		puts "Import Pumpers"
 	
-		csv_text = File.read('c:/rails/thumb/costrecovery/lib/csv_import/pumpers.csv')
+		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/pumpers.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access

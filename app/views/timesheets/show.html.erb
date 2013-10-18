@@ -622,6 +622,13 @@
 		<td>C.I.Agent Water Polymers</td>
 		<td><%= @mat_list.wtrPolymers_am %></td>
 	</tr>
+	<% end %>
+
+	<% if @mat_list.acid %>
+	<tr>
+		<td>Acid Safe</td>
+		<td><%= @mat_list.acid_am %></td>
+	</tr>
 	<% end %>	
 	
 	</table>

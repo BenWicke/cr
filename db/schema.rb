@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218193205) do
+ActiveRecord::Schema.define(:version => 20130917192007) do
 
   create_table "command_officers", :force => true do |t|
     t.string   "name"
@@ -264,6 +264,8 @@ ActiveRecord::Schema.define(:version => 20121218193205) do
     t.string   "strike_am"
     t.boolean  "wtrPolymers"
     t.string   "wtrPolymers_am"
+    t.boolean  "acid"
+    t.string   "acid_am"
   end
 
   create_table "profiles", :force => true do |t|

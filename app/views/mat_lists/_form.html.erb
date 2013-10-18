@@ -274,7 +274,20 @@
 		<td> <div class="field">
     <%= f.label "amount used:" %><%= f.text_field :wtrPolymers_am %>
       </div></td>
-	</tr>	
+	</tr>
+
+	<tr>
+		<td><div class="field">
+    <%= f.check_box :acid %><%= f.label "Acid Safe" %>
+    
+  </div>
+</td>
+		<td> <div class="field">
+    <%= f.label "amount used:" %><%= f.text_field :acid_am %>
+      </div></td>
+	</tr>
+
+	
 	</table>
 	
 	<hr />

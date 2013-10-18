@@ -5,7 +5,7 @@ namespace :import_incidents_csv do
 	task :create_incidents => :environment do
 		puts "Import Incidents"
 		
-		csv_text = File.read('c:/rails/thumb/costrecovery/lib/csv_import/incidents.csv')
+		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/incidents.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		
 		@incident_id_array = []
