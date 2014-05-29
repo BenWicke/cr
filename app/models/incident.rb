@@ -10,4 +10,6 @@ class Incident < ActiveRecord::Base
 	def truncated_time
 		incident_datetime.strftime("%m-%d-%Y")
 	end
+
+	
 end
