@@ -5,7 +5,7 @@ namespace :import_hazmat_specialists_csv do
 	task :create_hazmat_specialists => :environment do
 		puts "Import Hazmat Specialists"
 	
-		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/hazmat_specialists.csv')
+		csv_text = File.read('/Users/Ben/Sites/ror/LFD/hazmat_specialists.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access

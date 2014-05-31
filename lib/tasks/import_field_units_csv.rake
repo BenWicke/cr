@@ -5,7 +5,7 @@ namespace :import_field_units_csv do
 	task :create_field_units => :environment do
 		puts "Import Field Units"
 	
-		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/field_units.csv')
+		csv_text = File.read('/Users/Ben/Sites/ror/LFD/field_units.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access

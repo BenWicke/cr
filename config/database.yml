@@ -6,9 +6,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: costrecovery_import_testing
+  database: costrecovery_development
   pool: 5
-  username: benjaminw
+  username: Ben
   password:
   
 
@@ -18,9 +18,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: costrecovery_import_testing
+  database: costrecovery_development
   pool: 5
-  username: benjaminw
+  username: Ben
   password:
 
 #production:

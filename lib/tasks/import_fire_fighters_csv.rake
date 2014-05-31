@@ -5,7 +5,7 @@ namespace :import_fire_fighters_csv do
 	task :create_fire_fighters => :environment do
 		puts "Import Fire Fighters"
 	
-		csv_text = File.read('c:/Apps/Import_Folder/Lexington_Fire/fire_fighters.csv')
+		csv_text = File.read('/Users/Ben/Sites/ror/LFD/fire_fighters.csv')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access
