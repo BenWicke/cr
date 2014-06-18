@@ -11,8 +11,8 @@ class IncidentsController < ApplicationController
 	#  @incidents = Incident.where("user_id = ?", params[:user][:id])
 	#  @users = User.all
 	#  else	  
-	 @incidents = Incident.all(:order => 'created_at DESC')
-	@users = User.all
+	 @incidents = Incident.all(:order => 'id DESC')
+	 @users = User.all
 #	end
 	
 	else

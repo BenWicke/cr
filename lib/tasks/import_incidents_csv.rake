@@ -5,7 +5,7 @@ namespace :import_incidents_csv do
 	task :create_incidents => :environment do
 		puts "Import Incidents"
 		
-		csv_text = File.read('/Users/Ben/Sites/ror/LFD/incidents.csv')
+		csv_text = File.read('/Users/Ben/Sites/ror/LFD/incidents.csv', :encoding => 'windows-1251:utf-8')
 		csv = CSV.parse(csv_text, :headers => true)
 		
 		@incident_id_array = []

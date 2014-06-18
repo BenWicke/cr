@@ -5,7 +5,7 @@ namespace :import_hazmat_units_csv do
 	task :create_hazmat_units => :environment do
 		puts "Import Hazmat Units"
 	
-		csv_text = File.read('/Users/Ben/Sites/ror/LFD/hazmat_units.csv')
+		csv_text = File.read('/Users/Ben/Sites/ror/LFD/hazmat_units.csv', :encoding => 'windows-1251:utf-8')
 		csv = CSV.parse(csv_text, :headers => true)
 		csv.each_with_index do |row,index|
 			row = row.to_hash.with_indifferent_access
