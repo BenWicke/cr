@@ -6,9 +6,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: costrecovery_development
+  database: cr-071614
   pool: 5
-  username: Ben
+  username: Zeinab
   password:
   
 
@@ -18,9 +18,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: costrecovery_development
+  database: cr-071614
   pool: 5
-  username: Ben
+  username: Zeinab
   password:
 
 #production:

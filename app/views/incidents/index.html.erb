@@ -1,6 +1,52 @@
 
 <div id="submitit">
 <%= button_to 'Submit A New Incident', new_incident_path, :method => 'get' %>
+<!-- SEARCH FORM 
+<%= form_tag incidents_path, :method => 'get' do %>
+	<p>
+		Invoice: <%= text_field_tag :searchInvoice %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+
+<% end %>
+-->
+
+<!-- DROP DOWN MENU -->
+<script type="text/javascript">
+<!--
+function dropdown(mySel)
+{
+var myWin, myVal;
+myVal = mySel.options[mySel.selectedIndex].value;
+if(myVal)
+   {
+   if(mySel.form.target)myWin = parent[mySel.form.target];
+   else myWin = window;
+   if (! myWin) return true;
+   myWin.location = myVal;
+   }
+return false;
+}
+</script>
+
+
+<form method="post" onSubmit="return dropdown(this.gourl)">
+<p align="center">
+<select name="gourl">
+<option value="">Choose a Department...</option>
+<option value="/incidents">All</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Admin">Admin</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Eastwood">Eastwood</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Greendale">Greendale</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Jeffersontown">Jeffersontown</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Lexington">Lexington</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Southeast">Southeast</option>
+<option value="/incidents?utf8=%E2%9C%93&search=Zoneton">Zoneton</option>
+</SELECT>
+<INPUT TYPE=SUBMIT VALUE="Go">
+</p>
+</FORM><!-- DROP DOWN MENU -->
+
 </div>
 
 <% if Incident.count != 0 %>
@@ -33,6 +79,30 @@
 	 </tr>
 <% end %>
 </table>
+
+<% if params[:searchInvoice]%>
+	<div class="flickr_pagination">
+		<%= will_paginate @incidents, :container => false %>
+		<div class="page_info">
+			<%= page_entries_info @incidents %>
+		</div>
+	</div>
+<% elsif params[:search]%>
+	<div class="flickr_pagination">
+		<%= will_paginate @incidents, :container => false %>
+		<div class="page_info">
+			<%= page_entries_info @incidents %>
+		</div>
+	</div>
+<% else %>
+	<div class="flickr_pagination">
+		<%= will_paginate @incidents, :container => false %>
+		<div class="page_info">
+			<%= page_entries_info @incidents %>
+		</div>
+	</div>
+<% end %>
+
 </div>
 
 <% else %>
