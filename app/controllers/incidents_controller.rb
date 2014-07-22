@@ -11,20 +11,10 @@ class IncidentsController < ApplicationController
 	#  @incidents = Incident.where("user_id = ?", params[:user][:id])
 	#  @users = User.all
 	#  else	  
-    #   @incidents = Incident.all(:order => 'id DESC')
-	 
-    # Fiters through each department
-    if params[:search]
-         @incidents = Incident.paginate(:page => params[:page], :per_page => 10, :order => 'id DESC').find(:all, :conditions => ['department LIKE ?', "%#{params[:search]}%"], :joins => [:user => :profile])
-    # Search through specific column
-    elsif params[:searchInvoice]
-         @incidents = Incident.paginate(:page => params[:page], :per_page => 10, :order => 'id DESC').find(:all, :conditions => ['report_nr LIKE ?', "%#{params[:searchInvoice]}%"])
-    # Display all with pagination
-    else
-         @incidents = Incident.paginate(:page => params[:page], :per_page => 10, :order => 'id DESC')
-         @users = User.all
-    end
-
+	 @incidents = Incident.all(:order => 'id DESC')
+	 @users = User.all
+#	end
+	
 	else
 	@incidents = current_user.incidents
   end
